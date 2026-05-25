@@ -1,0 +1,23 @@
+<html>
+    <head>
+     
+     
+    </head>
+
+    <body style="background: red;">
+     
+     <h2 > BACKGROUND COLOUR : <span id="r"> RED </span> </h2>
+        
+     <button onclick="change()"> CLICK ME </button>
+    </body>
+
+    <script>
+        function change()
+        {
+            let c = "blue";
+            document.body.style.background = c;
+            document.getElementById("r").innerText = c;
+            
+        }
+    </script>
+</html>
