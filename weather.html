@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title> Weather </title>
+
+        <style>
+            body{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600") 
+            }
+
+            .main{
+                width: 90%;
+                max-width: 850px;
+                padding: 20px;
+                border-radius: 20px;
+                background: rgba(0, 0, 0, 0.4);
+            }
+            h1{
+                text-align: center;
+                color: orange;
+            }
+            p{
+                text-align: center;
+            }
+
+            .b{
+                gap: 10px;
+                display: flex;
+            }
+
+            .c{
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 15px;
+                background: rgba(255, 255, 255, 0.1);
+                text-align: center;
+            }
+
+            .forcast{
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .card{
+                flex: 1;
+                padding: 15px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.1);
+                text-align: center;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div class="main">
+            <h1> Weather Explore </h1>
+            <p> Stay updated with the latest weather conditions </p>
+
+
+            <div class="b">
+                <input type="text" id= "city" placeholder="city"> 
+                <button onclick="Searchcity()"> Search </button>
+            </div>
+
+            <div class="c">
+                <h2 id="cityname"> city </h2>
+                <h3> Temparature: 35.09 C</h3>
+                <p> Clear Sky </p>
+            </div>
+
+            <div class="forcast">
+                <div class="card">
+                    <h2> Saturday </h3>
+                        <p> ☀️ </p>
+                        <p> 34 C</p>
+                        </div>
+
+                        <div class="card">
+                        <h2> Sunday </h3>
+                        <p> ☁️ </p>
+                        <p> 31 C</p>
+                        </div>
+
+                        <div class="card">
+                        <h2> Monday </h3>
+                        <p> 🌫️ </p>
+                        <p> 30 C </p>
+                        </div>
+
+                        <div class="card">
+                        <h2> Tuesday </h3>
+                        <p> 🌦️ </p>
+                        <p> 29 C </p>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <script>
+            function Searchcity()
+
+            {
+                let city = document.getElementById ("city").value;
+                if(city!="")
+            {
+                document.getElementById("cityname").innerHTML = city;
+            }
+            }
+        </script>
+    </body>
+</html>
